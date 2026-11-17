@@ -13,6 +13,15 @@ points to GitHub. Until the GoDaddy DNS is switched, the live site is still the 
    This writes `blog/<slug>/index.html`, adds the card to the top of `blog/index.html` and adds the URL to `sitemap.xml`.
 5. Commit ("Publish blog: <title>") and push to `main`.
 
+## Daily automatic flow
+1. ~9:30 AM IST: the Claude writing task researches a topic (see tools/blog-plan.md), writes
+   `drafts/<YYYY-MM-DD>/spec.json` and pushes it to the `drafts` branch (not public).
+2. GitHub Actions (`.github/workflows/blog-pipeline.yml`, `tools/blog_pipeline.py`) emails it for approval
+   from info@ecosmetix.in to info@ecosmetix.in, subject "[Approval needed] Ecosmetix blog: ... [EBX <date>]".
+3. Reply APPROVE from info@ecosmetix.in -> published at the first check from 1 PM IST, with a confirmation reply.
+   Any other reply is saved as feedback; the writing task revises the draft at ~11:45 AM and it is emailed again.
+4. Needs the repository secret MAIL_APP_PASSWORD (a Google app password for info@ecosmetix.in).
+
 ## Rules for every post
 - 1,500–2,600 words of article (body + FAQs + references), at least 4 H2s, primary keyword in
   seo_title (≤60 chars, keyword first), H1, slug, first 100 words, two H2s, and the 140–158 char meta description.
