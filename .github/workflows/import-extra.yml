@@ -1,0 +1,32 @@
+name: Import extra pages from ecosmetix.in
+on:
+  push:
+    paths:
+      - .github/workflows/import-extra.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch pages
+        run: |
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
+          mkdir -p sample-status
+          curl -sSfL -A "$UA" https://www.ecosmetix.in/sample-status/ -o sample-status/index.html
+          # any other locally linked page or asset that is still missing
+          grep -rhoE "(href|src)=['\"]/[^'\"#?]+" --include=*.html . | sed -E "s/^(href|src)=['\"]\///" | sort -u > /tmp/links.txt
+          while read p; do
+            if [ ! -e "$p" ] && [ ! -e "$p/index.html" ]; then
+              echo "fetching missing: $p"
+              case "$p" in */) mkdir -p "$p"; curl -sSfL -A "$UA" "https://www.ecosmetix.in/$p" -o "${p}index.html" || echo "FAILED $p";;
+                *) mkdir -p "$(dirname "$p")"; curl -sSfL -A "$UA" "https://www.ecosmetix.in/$p" -o "$p" || echo "FAILED $p";; esac
+            fi
+          done < /tmp/links.txt
+          git rm -q .github/workflows/import-extra.yml
+          git config user.name 'ecosmetix-import'
+          git config user.email 'import@users.noreply.github.com'
+          git add -A
+          git commit -m 'Import sample-status page and any missing linked files' || true
+          git push
