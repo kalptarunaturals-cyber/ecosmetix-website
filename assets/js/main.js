@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var WA = '919877404384';
-  var API = 'https://api.ecosmetix.in'; // form handlers stay on GoDaddy hosting
+  var API = 'https://ecosmetix.in'; // form handlers stay on GoDaddy hosting
 
   // mobile menu
   var btn = document.querySelector('.menu-btn'), nav = document.querySelector('nav.main');
