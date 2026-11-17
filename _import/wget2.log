@@ -1,0 +1,746 @@
+--2026-11-17 13:14:19--  https://www.ecosmetix.in/
+Resolving www.ecosmetix.in (www.ecosmetix.in)... 184.168.102.190
+Connecting to www.ecosmetix.in (www.ecosmetix.in)|184.168.102.190|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 28528 (28K) [text/html]
+Saving to: ‘ecosmetix.in/index.html’
+
+     0K .......... .......... .......                         100%  122M=0s
+
+2026-11-17 13:14:20 (122 MB/s) - ‘ecosmetix.in/index.html’ saved [28528/28528]
+
+--2026-11-17 13:14:20--  https://www.ecosmetix.in/favicon.ico
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 1567 (1.5K) [image/x-icon]
+Saving to: ‘ecosmetix.in/favicon.ico’
+
+     0K .                                                     100% 20.9M=0s
+
+2026-11-17 13:14:20 (20.9 MB/s) - ‘ecosmetix.in/favicon.ico’ saved [1567/1567]
+
+--2026-11-17 13:14:20--  https://www.ecosmetix.in/assets/img/icon-192.png
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16975 (17K) [image/png]
+Saving to: ‘ecosmetix.in/assets/img/icon-192.png’
+
+     0K .......... ......                                     100%  238M=0s
+
+2026-11-17 13:14:20 (238 MB/s) - ‘ecosmetix.in/assets/img/icon-192.png’ saved [16975/16975]
+
+--2026-11-17 13:14:20--  https://www.ecosmetix.in/assets/css/style.css
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 17950 (18K) [text/css]
+Saving to: ‘ecosmetix.in/assets/css/style.css’
+
+     0K .......... .......                                    100%  112M=0s
+
+2026-11-17 13:14:20 (112 MB/s) - ‘ecosmetix.in/assets/css/style.css’ saved [17950/17950]
+
+--2026-11-17 13:14:20--  https://www.ecosmetix.in/assets/img/logo_color.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 31474 (31K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/logo_color.webp’
+
+     0K .......... .......... ..........                      100%  115M=0s
+
+2026-11-17 13:14:21 (115 MB/s) - ‘ecosmetix.in/assets/img/logo_color.webp’ saved [31474/31474]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/lab_dna.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 48676 (48K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/lab_dna.webp’
+
+     0K .......... .......... .......... .......... .......   100% 52.8M=0.001s
+
+2026-11-17 13:14:21 (52.8 MB/s) - ‘ecosmetix.in/assets/img/lab_dna.webp’ saved [48676/48676]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/flatlay.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 55000 (54K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/flatlay.webp’
+
+     0K .......... .......... .......... .......... .......... 93% 61.6M 0s
+    50K ...                                                   100% 6.91T=0.001s
+
+2026-11-17 13:14:21 (66.2 MB/s) - ‘ecosmetix.in/assets/img/flatlay.webp’ saved [55000/55000]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/product_lineup.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 54908 (54K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/product_lineup.webp’
+
+     0K .......... .......... .......... .......... .......... 93% 63.0M 0s
+    50K ...                                                   100% 6.74T=0.001s
+
+2026-11-17 13:14:21 (67.5 MB/s) - ‘ecosmetix.in/assets/img/product_lineup.webp’ saved [54908/54908]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/lab_glass.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 40674 (40K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/lab_glass.webp’
+
+     0K .......... .......... .......... .........            100% 67.2M=0.001s
+
+2026-11-17 13:14:21 (67.2 MB/s) - ‘ecosmetix.in/assets/img/lab_glass.webp’ saved [40674/40674]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/spf_hero.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 31262 (31K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/spf_hero.webp’
+
+     0K .......... .......... ..........                      100%  159M=0s
+
+2026-11-17 13:14:21 (159 MB/s) - ‘ecosmetix.in/assets/img/spf_hero.webp’ saved [31262/31262]
+
+--2026-11-17 13:14:21--  https://www.ecosmetix.in/assets/img/results/hair_b1.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 34152 (33K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/hair_b1.webp’
+
+     0K .......... .......... .......... ...                  100% 59.5M=0.001s
+
+2026-11-17 13:14:22 (59.5 MB/s) - ‘ecosmetix.in/assets/img/results/hair_b1.webp’ saved [34152/34152]
+
+--2026-11-17 13:14:22--  https://www.ecosmetix.in/assets/img/results/hair_a1.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 54490 (53K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/hair_a1.webp’
+
+     0K .......... .......... .......... .......... .......... 93%  133M 0s
+    50K ...                                                   100% 5.98T=0s
+
+2026-11-17 13:14:22 (141 MB/s) - ‘ecosmetix.in/assets/img/results/hair_a1.webp’ saved [54490/54490]
+
+--2026-11-17 13:14:22--  https://www.ecosmetix.in/assets/img/results/acne_cheek.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13658 (13K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/acne_cheek.webp’
+
+     0K .......... ...                                        100%  169M=0s
+
+2026-11-17 13:14:22 (169 MB/s) - ‘ecosmetix.in/assets/img/results/acne_cheek.webp’ saved [13658/13658]
+
+--2026-11-17 13:14:22--  https://www.ecosmetix.in/assets/img/results/undereye.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 36328 (35K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/undereye.webp’
+
+     0K .......... .......... .......... .....                100% 84.4M=0s
+
+2026-11-17 13:14:22 (84.4 MB/s) - ‘ecosmetix.in/assets/img/results/undereye.webp’ saved [36328/36328]
+
+--2026-11-17 13:14:22--  https://www.ecosmetix.in/assets/img/skin_profile.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 66060 (65K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/skin_profile.webp’
+
+     0K .......... .......... .......... .......... .......... 77% 82.8M 0s
+    50K .......... ....                                       100%  124M=0.001s
+
+2026-11-17 13:14:22 (89.6 MB/s) - ‘ecosmetix.in/assets/img/skin_profile.webp’ saved [66060/66060]
+
+--2026-11-17 13:14:22--  https://www.ecosmetix.in/assets/img/model_face.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 46916 (46K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/model_face.webp’
+
+     0K .......... .......... .......... .......... .....     100% 89.5M=0s
+
+2026-11-17 13:14:23 (89.5 MB/s) - ‘ecosmetix.in/assets/img/model_face.webp’ saved [46916/46916]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/img/model_eye.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13724 (13K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/model_eye.webp’
+
+     0K .......... ...                                        100%  145M=0s
+
+2026-11-17 13:14:23 (145 MB/s) - ‘ecosmetix.in/assets/img/model_eye.webp’ saved [13724/13724]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/img/spf_model.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 12958 (13K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/spf_model.webp’
+
+     0K .......... ..                                         100%  147M=0s
+
+2026-11-17 13:14:23 (147 MB/s) - ‘ecosmetix.in/assets/img/spf_model.webp’ saved [12958/12958]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/img/hair_waves.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 69782 (68K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/hair_waves.webp’
+
+     0K .......... .......... .......... .......... .......... 73%  115M 0s
+    50K .......... ........                                   100% 49.6M=0.001s
+
+2026-11-17 13:14:23 (85.3 MB/s) - ‘ecosmetix.in/assets/img/hair_waves.webp’ saved [69782/69782]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/img/body.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 23244 (23K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/body.webp’
+
+     0K .......... .......... ..                              100% 44.4M=0s
+
+2026-11-17 13:14:23 (44.4 MB/s) - ‘ecosmetix.in/assets/img/body.webp’ saved [23244/23244]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/img/logo_reversed.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 29570 (29K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/logo_reversed.webp’
+
+     0K .......... .......... ........                        100%  128M=0s
+
+2026-11-17 13:14:23 (128 MB/s) - ‘ecosmetix.in/assets/img/logo_reversed.webp’ saved [29570/29570]
+
+--2026-11-17 13:14:23--  https://www.ecosmetix.in/assets/js/main.js
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 5418 (5.3K) [text/javascript]
+Saving to: ‘ecosmetix.in/assets/js/main.js’
+
+     0K .....                                                 100%  183M=0s
+
+2026-11-17 13:14:24 (183 MB/s) - ‘ecosmetix.in/assets/js/main.js’ saved [5418/5418]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/assets/fonts/cormorant.woff
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 82096 (80K) [font/woff]
+Saving to: ‘ecosmetix.in/assets/fonts/cormorant.woff’
+
+     0K .......... .......... .......... .......... .......... 62% 69.2M 0s
+    50K .......... .......... ..........                      100% 57.6M=0.001s
+
+2026-11-17 13:14:24 (64.3 MB/s) - ‘ecosmetix.in/assets/fonts/cormorant.woff’ saved [82096/82096]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/assets/fonts/cormorant-italic.woff
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 60996 (60K) [font/woff]
+Saving to: ‘ecosmetix.in/assets/fonts/cormorant-italic.woff’
+
+     0K .......... .......... .......... .......... .......... 83% 38.6M 0s
+    50K .........                                             100%  120M=0.001s
+
+2026-11-17 13:14:24 (43.4 MB/s) - ‘ecosmetix.in/assets/fonts/cormorant-italic.woff’ saved [60996/60996]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/assets/fonts/montserrat.woff
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 69456 (68K) [font/woff]
+Saving to: ‘ecosmetix.in/assets/fonts/montserrat.woff’
+
+     0K .......... .......... .......... .......... .......... 73%  144M 0s
+    50K .......... .......                                    100%  114M=0s
+
+2026-11-17 13:14:24 (135 MB/s) - ‘ecosmetix.in/assets/fonts/montserrat.woff’ saved [69456/69456]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/cosmetic-manufacturer-north-india/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18665 (18K) [text/html]
+Saving to: ‘ecosmetix.in/cosmetic-manufacturer-north-india/index.html’
+
+     0K .......... ........                                   100% 46.2M=0s
+
+2026-11-17 13:14:24 (46.2 MB/s) - ‘ecosmetix.in/cosmetic-manufacturer-north-india/index.html’ saved [18665/18665]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/assets/img/facility.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 86566 (85K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/facility.webp’
+
+     0K .......... .......... .......... .......... .......... 59%  103M 0s
+    50K .......... .......... .......... ....                 100% 92.3M=0.001s
+
+2026-11-17 13:14:24 (98.2 MB/s) - ‘ecosmetix.in/assets/img/facility.webp’ saved [86566/86566]
+
+--2026-11-17 13:14:24--  https://www.ecosmetix.in/custom-cosmetic-formulation/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20041 (20K) [text/html]
+Saving to: ‘ecosmetix.in/custom-cosmetic-formulation/index.html’
+
+     0K .......... .........                                  100%  110M=0s
+
+2026-11-17 13:14:25 (110 MB/s) - ‘ecosmetix.in/custom-cosmetic-formulation/index.html’ saved [20041/20041]
+
+--2026-11-17 13:14:25--  https://www.ecosmetix.in/hair-care-manufacturer/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20520 (20K) [text/html]
+Saving to: ‘ecosmetix.in/hair-care-manufacturer/index.html’
+
+     0K .......... ..........                                 100% 98.4M=0s
+
+2026-11-17 13:14:25 (98.4 MB/s) - ‘ecosmetix.in/hair-care-manufacturer/index.html’ saved [20520/20520]
+
+--2026-11-17 13:14:25--  https://www.ecosmetix.in/assets/img/hair.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 61556 (60K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/hair.webp’
+
+     0K .......... .......... .......... .......... .......... 83% 79.6M 0s
+    50K ..........                                            100%  270M=0.001s
+
+2026-11-17 13:14:25 (90.3 MB/s) - ‘ecosmetix.in/assets/img/hair.webp’ saved [61556/61556]
+
+--2026-11-17 13:14:25--  https://www.ecosmetix.in/assets/img/results/hair_b2.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 36956 (36K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/hair_b2.webp’
+
+     0K .......... .......... .......... ......               100% 50.6M=0.001s
+
+2026-11-17 13:14:25 (50.6 MB/s) - ‘ecosmetix.in/assets/img/results/hair_b2.webp’ saved [36956/36956]
+
+--2026-11-17 13:14:25--  https://www.ecosmetix.in/assets/img/results/hair_a2.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 57640 (56K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/hair_a2.webp’
+
+     0K .......... .......... .......... .......... .......... 88% 79.0M 0s
+    50K ......                                                100%  264M=0.001s
+
+2026-11-17 13:14:25 (85.7 MB/s) - ‘ecosmetix.in/assets/img/results/hair_a2.webp’ saved [57640/57640]
+
+--2026-11-17 13:14:25--  https://www.ecosmetix.in/private-label-cosmetics-manufacturer/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20062 (20K) [text/html]
+Saving to: ‘ecosmetix.in/private-label-cosmetics-manufacturer/index.html’
+
+     0K .......... .........                                  100%  140M=0s
+
+2026-11-17 13:14:26 (140 MB/s) - ‘ecosmetix.in/private-label-cosmetics-manufacturer/index.html’ saved [20062/20062]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/product-brief/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 19817 (19K) [text/html]
+Saving to: ‘ecosmetix.in/product-brief/index.html’
+
+     0K .......... .........                                  100%  134M=0s
+
+2026-11-17 13:14:26 (134 MB/s) - ‘ecosmetix.in/product-brief/index.html’ saved [19817/19817]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/skin-care-manufacturer/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 19516 (19K) [text/html]
+Saving to: ‘ecosmetix.in/skin-care-manufacturer/index.html’
+
+     0K .......... .........                                  100% 78.6M=0s
+
+2026-11-17 13:14:26 (78.6 MB/s) - ‘ecosmetix.in/skin-care-manufacturer/index.html’ saved [19516/19516]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/assets/img/model_cream.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 46906 (46K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/model_cream.webp’
+
+     0K .......... .......... .......... .......... .....     100%  157M=0s
+
+2026-11-17 13:14:26 (157 MB/s) - ‘ecosmetix.in/assets/img/model_cream.webp’ saved [46906/46906]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/sunscreen-manufacturer/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20608 (20K) [text/html]
+Saving to: ‘ecosmetix.in/sunscreen-manufacturer/index.html’
+
+     0K .......... ..........                                 100%  187M=0s
+
+2026-11-17 13:14:26 (187 MB/s) - ‘ecosmetix.in/sunscreen-manufacturer/index.html’ saved [20608/20608]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/assets/img/cream_texture.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 9414 (9.2K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/cream_texture.webp’
+
+     0K .........                                             100%  136M=0s
+
+2026-11-17 13:14:26 (136 MB/s) - ‘ecosmetix.in/assets/img/cream_texture.webp’ saved [9414/9414]
+
+--2026-11-17 13:14:26--  https://www.ecosmetix.in/assets/img/spf_apply.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 35864 (35K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/spf_apply.webp’
+
+     0K .......... .......... .......... .....                100%  104M=0s
+
+2026-11-17 13:14:27 (104 MB/s) - ‘ecosmetix.in/assets/img/spf_apply.webp’ saved [35864/35864]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/third-party-cosmetic-manufacturer-india/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20917 (20K) [text/html]
+Saving to: ‘ecosmetix.in/third-party-cosmetic-manufacturer-india/index.html’
+
+     0K .......... ..........                                 100%  191M=0s
+
+2026-11-17 13:14:27 (191 MB/s) - ‘ecosmetix.in/third-party-cosmetic-manufacturer-india/index.html’ saved [20917/20917]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/about/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 19104 (19K) [text/html]
+Saving to: ‘ecosmetix.in/about/index.html’
+
+     0K .......... ........                                   100%  175M=0s
+
+2026-11-17 13:14:27 (175 MB/s) - ‘ecosmetix.in/about/index.html’ saved [19104/19104]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/blog/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18055 (18K) [text/html]
+Saving to: ‘ecosmetix.in/blog/index.html’
+
+     0K .......... .......                                    100%  124M=0s
+
+2026-11-17 13:14:27 (124 MB/s) - ‘ecosmetix.in/blog/index.html’ saved [18055/18055]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/assets/img/molecule.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 29188 (29K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/molecule.webp’
+
+     0K .......... .......... ........                        100% 59.4M=0s
+
+2026-11-17 13:14:27 (59.4 MB/s) - ‘ecosmetix.in/assets/img/molecule.webp’ saved [29188/29188]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/assets/img/dropper.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16246 (16K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/dropper.webp’
+
+     0K .......... .....                                      100% 71.9M=0s
+
+2026-11-17 13:14:27 (71.9 MB/s) - ‘ecosmetix.in/assets/img/dropper.webp’ saved [16246/16246]
+
+--2026-11-17 13:14:27--  https://www.ecosmetix.in/brochure/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15965 (16K) [text/html]
+Saving to: ‘ecosmetix.in/brochure/index.html’
+
+     0K .......... .....                                      100%  193M=0s
+
+2026-11-17 13:14:28 (193 MB/s) - ‘ecosmetix.in/brochure/index.html’ saved [15965/15965]
+
+--2026-11-17 13:14:28--  https://www.ecosmetix.in/contact/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16790 (16K) [text/html]
+Saving to: ‘ecosmetix.in/contact/index.html’
+
+     0K .......... ......                                     100%  111M=0s
+
+2026-11-17 13:14:28 (111 MB/s) - ‘ecosmetix.in/contact/index.html’ saved [16790/16790]
+
+--2026-11-17 13:14:28--  https://www.ecosmetix.in/faq/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 21102 (21K) [text/html]
+Saving to: ‘ecosmetix.in/faq/index.html’
+
+     0K .......... ..........                                 100%  201M=0s
+
+2026-11-17 13:14:28 (201 MB/s) - ‘ecosmetix.in/faq/index.html’ saved [21102/21102]
+
+--2026-11-17 13:14:28--  https://www.ecosmetix.in/innovations/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20469 (20K) [text/html]
+Saving to: ‘ecosmetix.in/innovations/index.html’
+
+     0K .......... .........                                  100% 96.4M=0s
+
+2026-11-17 13:14:28 (96.4 MB/s) - ‘ecosmetix.in/innovations/index.html’ saved [20469/20469]
+
+--2026-11-17 13:14:28--  https://www.ecosmetix.in/assets/img/serum_teal.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 15192 (15K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/serum_teal.webp’
+
+     0K .......... ....                                       100%  145M=0s
+
+2026-11-17 13:14:28 (145 MB/s) - ‘ecosmetix.in/assets/img/serum_teal.webp’ saved [15192/15192]
+
+--2026-11-17 13:14:28--  https://www.ecosmetix.in/privacy-policy/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 14752 (14K) [text/html]
+Saving to: ‘ecosmetix.in/privacy-policy/index.html’
+
+     0K .......... ....                                       100%  266M=0s
+
+2026-11-17 13:14:29 (266 MB/s) - ‘ecosmetix.in/privacy-policy/index.html’ saved [14752/14752]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/product-ranges/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 20091 (20K) [text/html]
+Saving to: ‘ecosmetix.in/product-ranges/index.html’
+
+     0K .......... .........                                  100%  193M=0s
+
+2026-11-17 13:14:29 (193 MB/s) - ‘ecosmetix.in/product-ranges/index.html’ saved [20091/20091]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/assets/img/model_blue.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 61580 (60K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/model_blue.webp’
+
+     0K .......... .......... .......... .......... .......... 83%  157M 0s
+    50K ..........                                            100%  125M=0s
+
+2026-11-17 13:14:29 (151 MB/s) - ‘ecosmetix.in/assets/img/model_blue.webp’ saved [61580/61580]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/assets/img/model_glow.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 36154 (35K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/model_glow.webp’
+
+     0K .......... .......... .......... .....                100%  186M=0s
+
+2026-11-17 13:14:29 (186 MB/s) - ‘ecosmetix.in/assets/img/model_glow.webp’ saved [36154/36154]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/assets/img/baby.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 21278 (21K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/baby.webp’
+
+     0K .......... ..........                                 100%  148M=0s
+
+2026-11-17 13:14:29 (148 MB/s) - ‘ecosmetix.in/assets/img/baby.webp’ saved [21278/21278]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/assets/img/pregnancy.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 21940 (21K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/pregnancy.webp’
+
+     0K .......... .......... .                               100% 63.9M=0s
+
+2026-11-17 13:14:29 (63.9 MB/s) - ‘ecosmetix.in/assets/img/pregnancy.webp’ saved [21940/21940]
+
+--2026-11-17 13:14:29--  https://www.ecosmetix.in/assets/img/body_foam.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 46298 (45K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/body_foam.webp’
+
+     0K .......... .......... .......... .......... .....     100%  116M=0s
+
+2026-11-17 13:14:30 (116 MB/s) - ‘ecosmetix.in/assets/img/body_foam.webp’ saved [46298/46298]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/results/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 21138 (21K) [text/html]
+Saving to: ‘ecosmetix.in/results/index.html’
+
+     0K .......... ..........                                 100%  202M=0s
+
+2026-11-17 13:14:30 (202 MB/s) - ‘ecosmetix.in/results/index.html’ saved [21138/21138]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/assets/img/white_tubes.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 13878 (14K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/white_tubes.webp’
+
+     0K .......... ...                                        100% 71.6M=0s
+
+2026-11-17 13:14:30 (71.6 MB/s) - ‘ecosmetix.in/assets/img/white_tubes.webp’ saved [13878/13878]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/assets/img/results/acne_beard.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 22520 (22K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/acne_beard.webp’
+
+     0K .......... .......... .                               100% 64.7M=0s
+
+2026-11-17 13:14:30 (64.7 MB/s) - ‘ecosmetix.in/assets/img/results/acne_beard.webp’ saved [22520/22520]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/assets/img/results/pigment.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 46052 (45K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/pigment.webp’
+
+     0K .......... .......... .......... .......... ....      100% 65.7M=0.001s
+
+2026-11-17 13:14:30 (65.7 MB/s) - ‘ecosmetix.in/assets/img/results/pigment.webp’ saved [46052/46052]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/assets/img/results/fineline_2.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 24800 (24K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/fineline_2.webp’
+
+     0K .......... .......... ....                            100% 60.3M=0s
+
+2026-11-17 13:14:30 (60.3 MB/s) - ‘ecosmetix.in/assets/img/results/fineline_2.webp’ saved [24800/24800]
+
+--2026-11-17 13:14:30--  https://www.ecosmetix.in/assets/img/results/fineline_30.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 24954 (24K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/fineline_30.webp’
+
+     0K .......... .......... ....                            100% 50.1M=0s
+
+2026-11-17 13:14:31 (50.1 MB/s) - ‘ecosmetix.in/assets/img/results/fineline_30.webp’ saved [24954/24954]
+
+--2026-11-17 13:14:31--  https://www.ecosmetix.in/assets/img/results/forehead1.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 47576 (46K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/forehead1.webp’
+
+     0K .......... .......... .......... .......... ......    100% 76.6M=0.001s
+
+2026-11-17 13:14:31 (76.6 MB/s) - ‘ecosmetix.in/assets/img/results/forehead1.webp’ saved [47576/47576]
+
+--2026-11-17 13:14:31--  https://www.ecosmetix.in/assets/img/results/forehead2.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 37006 (36K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/forehead2.webp’
+
+     0K .......... .......... .......... ......               100% 73.4M=0s
+
+2026-11-17 13:14:31 (73.4 MB/s) - ‘ecosmetix.in/assets/img/results/forehead2.webp’ saved [37006/37006]
+
+--2026-11-17 13:14:31--  https://www.ecosmetix.in/assets/img/results/eye_lines.webp
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 48972 (48K) [image/webp]
+Saving to: ‘ecosmetix.in/assets/img/results/eye_lines.webp’
+
+     0K .......... .......... .......... .......... .......   100%  112M=0s
+
+2026-11-17 13:14:31 (112 MB/s) - ‘ecosmetix.in/assets/img/results/eye_lines.webp’ saved [48972/48972]
+
+--2026-11-17 13:14:31--  https://www.ecosmetix.in/blog/acne-skincare-grading-system-brands/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16694 (16K) [text/html]
+Saving to: ‘ecosmetix.in/blog/acne-skincare-grading-system-brands/index.html’
+
+     0K .......... ......                                     100% 60.7M=0s
+
+2026-11-17 13:14:31 (60.7 MB/s) - ‘ecosmetix.in/blog/acne-skincare-grading-system-brands/index.html’ saved [16694/16694]
+
+--2026-11-17 13:14:31--  https://www.ecosmetix.in/blog/cost-to-launch-skincare-product-india/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 17058 (17K) [text/html]
+Saving to: ‘ecosmetix.in/blog/cost-to-launch-skincare-product-india/index.html’
+
+     0K .......... ......                                     100%  169M=0s
+
+2026-11-17 13:14:32 (169 MB/s) - ‘ecosmetix.in/blog/cost-to-launch-skincare-product-india/index.html’ saved [17058/17058]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/hair-growth-serum-actives-formulation/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16652 (16K) [text/html]
+Saving to: ‘ecosmetix.in/blog/hair-growth-serum-actives-formulation/index.html’
+
+     0K .......... ......                                     100% 49.0M=0s
+
+2026-11-17 13:14:32 (49.0 MB/s) - ‘ecosmetix.in/blog/hair-growth-serum-actives-formulation/index.html’ saved [16652/16652]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/how-to-choose-third-party-cosmetic-manufacturer-india/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18069 (18K) [text/html]
+Saving to: ‘ecosmetix.in/blog/how-to-choose-third-party-cosmetic-manufacturer-india/index.html’
+
+     0K .......... .......                                    100%  181M=0s
+
+2026-11-17 13:14:32 (181 MB/s) - ‘ecosmetix.in/blog/how-to-choose-third-party-cosmetic-manufacturer-india/index.html’ saved [18069/18069]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/how-to-write-cosmetic-product-brief/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16780 (16K) [text/html]
+Saving to: ‘ecosmetix.in/blog/how-to-write-cosmetic-product-brief/index.html’
+
+     0K .......... ......                                     100%  106M=0s
+
+2026-11-17 13:14:32 (106 MB/s) - ‘ecosmetix.in/blog/how-to-write-cosmetic-product-brief/index.html’ saved [16780/16780]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/liposomal-encapsulation-delivery-systems-explained/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 16910 (17K) [text/html]
+Saving to: ‘ecosmetix.in/blog/liposomal-encapsulation-delivery-systems-explained/index.html’
+
+     0K .......... ......                                     100%  108M=0s
+
+2026-11-17 13:14:32 (108 MB/s) - ‘ecosmetix.in/blog/liposomal-encapsulation-delivery-systems-explained/index.html’ saved [16910/16910]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/mineral-sunscreen-zinc-oxide-no-white-cast/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 17141 (17K) [text/html]
+Saving to: ‘ecosmetix.in/blog/mineral-sunscreen-zinc-oxide-no-white-cast/index.html’
+
+     0K .......... ......                                     100%  176M=0s
+
+2026-11-17 13:14:32 (176 MB/s) - ‘ecosmetix.in/blog/mineral-sunscreen-zinc-oxide-no-white-cast/index.html’ saved [17141/17141]
+
+--2026-11-17 13:14:32--  https://www.ecosmetix.in/blog/private-label-vs-contract-manufacturing-vs-custom-formulation/
+Reusing existing connection to www.ecosmetix.in:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 17472 (17K) [text/html]
+Saving to: ‘ecosmetix.in/blog/private-label-vs-contract-manufacturing-vs-custom-formulation/index.html’
+
+     0K .......... .......                                    100%  153M=0s
+
+2026-11-17 13:14:33 (153 MB/s) - ‘ecosmetix.in/blog/private-label-vs-contract-manufacturing-vs-custom-formulation/index.html’ saved [17472/17472]
+
+FINISHED --2026-11-17 13:14:33--
+Total wall clock time: 13s
+Downloaded: 73 files, 2.2M in 0.02s (88.3 MB/s)
