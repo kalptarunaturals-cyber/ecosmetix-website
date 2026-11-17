@@ -1,0 +1,34 @@
+name: Import live site from ecosmetix.in
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-site.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mirror site
+        run: |
+          mkdir -p /tmp/m && cd /tmp/m
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
+          wget --mirror --page-requisites --no-parent -e robots=off --user-agent="$UA" --domains ecosmetix.in,www.ecosmetix.in https://ecosmetix.in/ -o /tmp/wget1.log || true
+          for f in sitemap.xml robots.txt blog-sitemap.xml favicon.ico site.webmanifest manifest.json; do wget -q -x -nH --user-agent="$UA" -P ecosmetix.in "https://ecosmetix.in/$f" || true; done
+          if [ -f ecosmetix.in/sitemap.xml ]; then grep -oE '<loc>[^<]+' ecosmetix.in/sitemap.xml | sed 's/<loc>//' > /tmp/urls.txt; wget -x -nH -P ecosmetix.in --page-requisites -e robots=off --user-agent="$UA" --domains ecosmetix.in,www.ecosmetix.in -i /tmp/urls.txt -o /tmp/wget2.log || true; fi
+          grep -E ' 404 | ERROR ' /tmp/wget*.log | head -50 || true
+          find /tmp/m -type f | wc -l
+      - name: Copy into repo
+        run: |
+          shopt -s dotglob
+          cp -r /tmp/m/ecosmetix.in/* . || true
+          if [ -d /tmp/m/www.ecosmetix.in ]; then cp -rn /tmp/m/www.ecosmetix.in/* . || true; fi
+          mkdir -p _import && cp /tmp/wget*.log _import/ 2>/dev/null || true
+          find . -path ./.git -prune -o -type f -print | sed 's|^./||' | sort > _import/files.txt
+          git config user.name 'ecosmetix-import'
+          git config user.email 'import@users.noreply.github.com'
+          git add -A
+          git commit -m 'Import live site from ecosmetix.in' || echo 'nothing to commit'
+          git push
