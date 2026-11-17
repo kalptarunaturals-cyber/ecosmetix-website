@@ -1,4 +1,4 @@
-name: Import 404 page and downloads
+name: Import 404 page and downloads (retry)
 on:
   push:
     paths:
@@ -15,9 +15,9 @@ jobs:
           UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36'
           curl -sSL -A "$UA" https://www.ecosmetix.in/404.html -o 404.html
           mkdir -p downloads
-          curl -sSfL -A "$UA" https://www.ecosmetix.in/downloads/Ecosmetix-Mineral-Sunscreen-SPF70.pdf -o downloads/Ecosmetix-Mineral-Sunscreen-SPF70.pdf
-          curl -sSfL -A "$UA" https://www.ecosmetix.in/downloads/Ecosmetix-Product-Brochure-2026-27.pdf -o downloads/Ecosmetix-Product-Brochure-2026-27.pdf
-          ls -l 404.html downloads
+          curl -sSL -A "$UA" https://www.ecosmetix.in/downloads/Ecosmetix-Mineral-Sunscreen-SPF70.pdf -o downloads/Ecosmetix-Mineral-Sunscreen-SPF70.pdf
+          curl -sSL -A "$UA" https://www.ecosmetix.in/downloads/Ecosmetix-Product-Brochure-2026-27.pdf -o downloads/Ecosmetix-Product-Brochure-2026-27.pdf
+          file downloads/* 404.html; for f in downloads/*.pdf; do head -c 5 "$f" | grep -q %PDF || { echo "not a pdf: $f"; rm -f "$f"; }; done
           git rm -q .github/workflows/import-extra2.yml
           git config user.name 'ecosmetix-import'
           git config user.email 'import@users.noreply.github.com'
