@@ -2,6 +2,7 @@
 (function () {
   'use strict';
   var WA = '919877404384';
+  var API = 'https://api.ecosmetix.in'; // form handlers stay on GoDaddy hosting
 
   // mobile menu
   var btn = document.querySelector('.menu-btn'), nav = document.querySelector('nav.main');
@@ -45,7 +46,7 @@
         .then(function (d) {
           msg.className = 'msg ' + (d.ok ? 'ok' : 'err'); msg.innerHTML = d.message;
           if (d.ok) {
-            if (d.download) { msg.innerHTML += ' <a class="btn btn-primary" style="margin-top:12px" href="' + d.download + '">Download now</a>'; }
+            if (d.download) { msg.innerHTML += ' <a class="btn btn-primary" style="margin-top:12px" href="' + new URL(d.download, API + '/').href + '">Download now</a>'; }
             if (d.redirect) { window.location = d.redirect; }
             if (!d.keep) f.reset();
             if (window.gtag) gtag('event', 'generate_lead', { form: f.id });
@@ -65,7 +66,7 @@
     e.preventDefault();
     var out = document.getElementById('status-result'), id = sf.sample_id.value.trim().toUpperCase(), ph = sf.phone4.value.trim();
     out.innerHTML = '<p class="small">Checking…</p>';
-    fetch('/api/status.php?id=' + encodeURIComponent(id) + '&p=' + encodeURIComponent(ph), { headers: { 'Accept': 'application/json' } })
+    fetch(API + '/api/status.php?id=' + encodeURIComponent(id) + '&p=' + encodeURIComponent(ph), { headers: { 'Accept': 'application/json' } })
       .then(function (r) { return r.json(); })
       .then(function (d) {
         var wa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hello Ecosmetix, please share the latest status of my sample ' + id + '.');
