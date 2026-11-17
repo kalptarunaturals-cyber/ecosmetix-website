@@ -25,7 +25,7 @@ APPROVER = 'info@ecosmetix.in'
 PUBLISH_FROM_HOUR = 13  # IST
 
 USER = os.environ.get('MAIL_USER', 'info@ecosmetix.in')
-PWD = os.environ.get('MAIL_APP_PASSWORD', '')
+PWD = os.environ.get('MAIL_APP_PASSWORD', '').replace(' ', '').strip()  # Google shows app passwords with spaces
 MAIN = os.environ.get('MAIN_DIR', '.')
 DRAFTS = os.environ.get('DRAFTS_DIR', 'drafts-wt')
 

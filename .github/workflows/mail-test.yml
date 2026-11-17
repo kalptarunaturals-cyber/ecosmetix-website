@@ -1,0 +1,35 @@
+name: One-time email test (retry)
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/mail-test.yml
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in by IMAP and send a test email
+        env:
+          MAIL_USER: info@ecosmetix.in
+          MAIL_APP_PASSWORD: ${{ secrets.MAIL_APP_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import imaplib, smtplib, os
+          from email.message import EmailMessage
+          u, p = os.environ['MAIL_USER'], os.environ['MAIL_APP_PASSWORD'].replace(' ', '').strip(); print('password length', len(p))
+          M = imaplib.IMAP4_SSL('imap.gmail.com'); M.login(u, p); print('IMAP login OK'); M.logout()
+          m = EmailMessage(); m['From'] = 'Ecosmetix Blog <%s>' % u; m['To'] = u
+          m['Subject'] = 'Ecosmetix blog: email test (no action needed)'
+          m.set_content('This is a one-time test from the Ecosmetix website on GitHub.\n\nFrom tomorrow, the daily blog draft will arrive from this address at about 10 AM. Reply APPROVE to publish it at about 1 PM, or reply with changes.')
+          with smtplib.SMTP_SSL('smtp.gmail.com', 465) as s:
+              s.login(u, p); s.send_message(m)
+          print('SMTP send OK')
+          PY
+      - name: Remove this one-time workflow
+        if: always()
+        run: |
+          git config user.name 'Ecosmetix Blog'; git config user.email 'info@ecosmetix.in'
+          git rm -q .github/workflows/mail-test.yml && git commit -qm 'Remove one-time email test' && git push
