@@ -8,6 +8,13 @@ Usage (run from the repository root):
   python3 tools/blog_tool.py check   tools/specs/<date>-<slug>.json
   python3 tools/blog_tool.py preview tools/specs/<date>-<slug>.json out.html
   python3 tools/blog_tool.py build   tools/specs/<date>-<slug>.json
+  python3 tools/blog_tool.py originality <spec> [research-source-folder]
+
+`check` (and `build`) refuse a post that repeats an existing post or draft: same slug,
+title or primary keyword, more than 3% shared 8-word phrases, or an identical run of
+16+ words. `originality` also compares the post with the research pages saved in the
+folder (plain text or HTML, one file per page) and prints sentences to search on Google
+in quotes; an exact match anywhere on the web means the sentence must be rewritten.
 
 Spec fields:
   slug          lowercase-hyphen URL slug (primary keyword in it)
@@ -130,7 +137,145 @@ def check(spec, repo='.'):
             warns.append('secondary keyword not used: ' + s)
     if os.path.exists(os.path.join(repo, 'blog', spec['slug'], 'index.html')):
         warns.append('a post with this slug already exists (build will overwrite it)')
+    o_errs, _, _ = originality(spec, repo)
+    errs += o_errs
     return errs, warns
+
+
+# ---------------------------------------------------------------- originality
+# Repetition: a new post must not reuse the slug, title or primary keyword of any
+# published post or earlier draft, and must not share passages with them.
+# Plagiarism: the same passage test is run against the text of the web pages used
+# while researching (saved as .txt/.html files in a folder), and the most distinctive
+# sentences are printed so they can be searched on Google in quotes.
+SHINGLE = 8          # words per shingle
+MAX_SHARED = 0.03    # max share of the new post's shingles found in any one other text
+MAX_RUN = 16         # max identical run of words with any one other text
+BOILER = ["planning a product? share your product brief and our r&d team will reply within one working day."]
+
+
+def plain_words(h):
+    t = re.sub(r'<(script|style|svg|figcaption|caption)[\s\S]*?</\1>', ' ', h)
+    t = re.sub(r"<h2 id='references'>[\s\S]*?</ol>", ' ', t)
+    t = re.sub(r'<[^>]+>', ' ', t)
+    t = html.unescape(t).lower()
+    for b in BOILER:
+        t = t.replace(b, ' ')
+    return re.findall(r"[a-z0-9][a-z0-9'%.-]*", t)
+
+
+def shingles(ws, n=SHINGLE):
+    return {' '.join(ws[i:i + n]) for i in range(max(0, len(ws) - n + 1))}
+
+
+def longest_run(a, b):
+    """Longest run of identical consecutive words shared by word lists a and b."""
+    idx = {}
+    for i in range(len(b) - 5):
+        idx.setdefault(tuple(b[i:i + 6]), []).append(i)
+    best, best_txt = 0, ''
+    for i in range(len(a) - 5):
+        for j in idx.get(tuple(a[i:i + 6]), []):
+            k = 6
+            while i + k < len(a) and j + k < len(b) and a[i + k] == b[j + k]:
+                k += 1
+            if k > best:
+                best, best_txt = k, ' '.join(a[i:i + k])
+    return best, best_txt
+
+
+def article_from_page(p):
+    s = open(p, encoding='utf-8', errors='ignore').read()
+    m = re.search(r"<article class='post'>([\s\S]*?)</article>", s)
+    return m.group(1) if m else s
+
+
+def other_texts(spec, repo='.', extra_dirs=()):
+    """Yield (label, meta, text) for every published post, spec and draft except this one."""
+    blog = os.path.join(repo, 'blog')
+    for d in sorted(os.listdir(blog)):
+        p = os.path.join(blog, d, 'index.html')
+        if d != spec['slug'] and os.path.isfile(p):
+            s = open(p, encoding='utf-8').read()
+            h1 = re.search(r'<h1[^>]*>(.*?)</h1>', s, re.S)
+            kw = re.search(r'"keywords": "([^",]*)', s)
+            yield 'blog/' + d, {'slug': d, 'title': html.unescape(re.sub(r'<[^>]+>', '', h1.group(1))) if h1 else '',
+                                'primary_keyword': kw.group(1) if kw else ''}, article_from_page(p)
+    spec_files = []
+    for d in [os.path.join(repo, 'tools', 'specs')] + list(extra_dirs):
+        for root, _, fs in os.walk(d):
+            spec_files += [os.path.join(root, f) for f in fs if f.endswith('.json')]
+    try:  # drafts live on the drafts branch
+        import subprocess
+        ls = subprocess.run(['git', '-C', repo, 'ls-tree', '-r', '--name-only', 'origin/drafts'], capture_output=True, text=True).stdout.split()
+        for f in ls:
+            if f.startswith('drafts/') and f.endswith('spec.json'):
+                txt = subprocess.run(['git', '-C', repo, 'show', 'origin/drafts:' + f], capture_output=True, text=True).stdout
+                spec_files.append(('origin/drafts:' + f, txt))
+    except Exception:
+        pass
+    seen = set()
+    for f in spec_files:
+        label, txt = (f, open(f, encoding='utf-8').read()) if isinstance(f, str) else f
+        try:
+            o = json.loads(txt)
+        except Exception:
+            continue
+        if o.get('slug') == spec['slug'] or o.get('slug') in seen:
+            continue
+        seen.add(o.get('slug'))
+        yield label, o, article_html(o)
+
+
+def compare(spec_words, label, text):
+    ow = plain_words(text)
+    a, b = shingles(spec_words), shingles(ow)
+    shared = len(a & b) / max(1, len(a))
+    run, run_txt = longest_run(spec_words, ow)
+    return shared, run, run_txt
+
+
+def originality(spec, repo='.', source_dir=None):
+    errs, warns, report = [], [], []
+    mine = plain_words(article_html(spec))
+    norm = lambda x: re.sub(r'[^a-z0-9]+', ' ', (x or '').lower()).strip()
+    for label, meta, text in other_texts(spec, repo):
+        if norm(meta.get('primary_keyword')) and norm(meta.get('primary_keyword')) == norm(spec['primary_keyword']):
+            errs.append('primary keyword "%s" already used by %s' % (spec['primary_keyword'], label))
+        if norm(meta.get('title')) == norm(spec['title']):
+            errs.append('title already used by ' + label)
+        shared, run, run_txt = compare(mine, label, text)
+        report.append((shared, run, label))
+        if shared > MAX_SHARED or run >= MAX_RUN:
+            errs.append('repeats text from %s: %.1f%% shared %d-word phrases, longest identical run %d words: "%s"'
+                        % (label, shared * 100, SHINGLE, run, run_txt[:160]))
+    if source_dir and os.path.isdir(source_dir):
+        for f in sorted(os.listdir(source_dir)):
+            p = os.path.join(source_dir, f)
+            if not os.path.isfile(p):
+                continue
+            shared, run, run_txt = compare(mine, f, open(p, encoding='utf-8', errors='ignore').read())
+            report.append((shared, run, 'source:' + f))
+            if shared > MAX_SHARED or run >= MAX_RUN:
+                errs.append('too close to research source %s: %.1f%% shared phrases, longest identical run %d words: "%s"'
+                            % (f, shared * 100, run, run_txt[:160]))
+    elif source_dir:
+        warns.append('source folder not found: ' + source_dir)
+    else:
+        warns.append('no research-source folder given: web plagiarism only covered by the quoted-sentence search below')
+    return errs, warns, report
+
+
+def distinctive_sentences(spec, n=6):
+    """Longest plain sentences of the body: search each in quotes on Google; any exact hit = rewrite."""
+    t = re.sub(r'<(svg|table|figure)[\s\S]*?</\1>', ' ', spec['body_html'])
+    t = re.sub(r'</(h2|h3|p|li)>', '\n', t)
+    t = html.unescape(re.sub(r'<[^>]+>', ' ', t))
+    sents = [' '.join(s.split()) for s in re.split(r'(?<=[.?!])\s+|\n', t)]
+    sents = [s for s in sents if 14 <= len(s.split()) <= 40 and 'Ecosmetix' not in s]
+    sents.sort(key=len, reverse=True)
+    step = max(1, len(sents) // n)
+    return [' '.join(s.split()[:16]) for s in sents[::step][:n]]
 
 
 def render(spec, repo='.', absolute=False):
@@ -217,7 +362,7 @@ def main():
     errs, warns = check(spec)
     for w in warns:
         print('WARN:', w)
-    if cmd in ('check', 'build') and errs:
+    if cmd in ('check', 'build', 'originality') and errs:
         for e in errs:
             print('ERROR:', e)
         sys.exit(1)
@@ -229,6 +374,18 @@ def main():
         print('preview written to', out, '(%d words)' % words(article_html(spec)))
     elif cmd == 'build':
         build(spec)
+    elif cmd == 'originality':
+        o_errs, o_warns, report = originality(spec, '.', sys.argv[3] if len(sys.argv) > 3 else None)
+        for shared, run, label in sorted(report, reverse=True)[:8]:
+            print('  %-60s %5.1f%% shared phrases, longest run %d words' % (label[:60], shared * 100, run))
+        for w in o_warns:
+            print('WARN:', w)
+        print('Search each of these on Google in quotes; any exact match must be rewritten:')
+        for s in distinctive_sentences(spec):
+            print('  "%s"' % s)
+        if o_errs:
+            sys.exit(1)
+        print('OK: no repetition or copied passages found')
     else:
         sys.exit(__doc__)
 
