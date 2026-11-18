@@ -32,6 +32,12 @@ Google app password as the MAIL_APP_PASSWORD secret and its workflow is not inst
 - Never name competitors (BO International, Maxnova, Dermat India) or brands we must not show
   (Cureskin, Curehair, Nature4Nature, Leafon). Clients that may be named: Numour, Just Herbs.
 - Never invent numbers, studies or results. Use only site facts, cited sources or keyword-tool data.
+- Original writing only (no repetition, no plagiarism). `check` and `build` refuse a post that reuses the slug,
+  title or primary keyword of any published post or draft, shares more than 3% of its 8-word phrases with one,
+  or has an identical run of 16+ words. Before emailing a draft, also run
+  `python3 tools/blog_tool.py originality <spec> [folder of saved research pages]` and search each printed
+  sentence on Google in quotes; any exact match on another site must be rewritten in our own words. Quote a
+  law or standard only inside quotation marks with the source cited.
 
 ## Forms
 The brief, brochure, contact and sample-status forms post to PHP files under `/api/` that run on GoDaddy

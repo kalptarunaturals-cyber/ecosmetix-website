@@ -36,3 +36,5 @@ and turn readers into product briefs (/product-brief/) and WhatsApp enquiries.
 - Never name competitors (BO International, Maxnova, Dermat India) or brands that must not appear
   (Cureskin, Curehair, Nature4Nature, Leafon). Clients that may be named: Numour, Just Herbs.
 - Never invent numbers, studies, results or testimonials.
+- Original writing only: no repeated topics, keywords or passages across posts (enforced by `check`), and no text
+  copied from other websites (run `originality` and search its sentences on Google in quotes before emailing).
