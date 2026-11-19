@@ -1,5 +1,7 @@
 {
  "sent_at": "2026-11-19T09:24:41+05:30",
  "thread_id": "1a1f1f12da6b0745",
- "subject": "[Approval needed] Ecosmetix blog: Third Party Shampoo Manufacturer in India: Formulas, Process, Rules and Questions to Ask [EBX 2026-11-19]"
+ "subject": "[Approval needed] Ecosmetix blog: Third Party Shampoo Manufacturer in India: Formulas, Process, Rules and Questions to Ask [EBX 2026-11-19]",
+ "approved_at": "2026-11-19T12:48:55+05:30",
+ "publish_blocked": "blog_tool build refused: its own standard callout (\"Planning a product? ... within one working day.\") counts as an 18-word repeat of the 2026-11-18 post. Needs a tool fix by the owner."
 }
