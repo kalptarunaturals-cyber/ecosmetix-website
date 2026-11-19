@@ -1,0 +1,13 @@
+diff --git a/tools/blog_tool.py b/tools/blog_tool.py
+index 4b9cd63..2275583 100644
+--- a/tools/blog_tool.py
++++ b/tools/blog_tool.py
+@@ -158,7 +158,7 @@ def plain_words(h):
+     t = re.sub(r'<(script|style|svg|figcaption|caption)[\s\S]*?</\1>', ' ', h)
+     t = re.sub(r"<h2 id='references'>[\s\S]*?</ol>", ' ', t)
+     t = re.sub(r'<[^>]+>', ' ', t)
+-    t = html.unescape(t).lower()
++    t = re.sub(r'\s+', ' ', html.unescape(t).lower())
+     for b in BOILER:
+         t = t.replace(b, ' ')
+     return re.findall(r"[a-z0-9][a-z0-9'%.-]*", t)
