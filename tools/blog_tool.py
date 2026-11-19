@@ -58,6 +58,14 @@ def nice_date(d):
     return datetime.date.fromisoformat(d).strftime('%d %B %Y')
 
 
+CALLOUT = "<div class='callout'>Planning a product? <a href='/product-brief/'>Share your product brief</a> and our R&amp;D team will reply within one working day.</div>"
+
+
+def compare_html(spec):
+    """Article text used for repetition checks: the standard template callout is left out."""
+    return article_html(spec).replace(CALLOUT, '')
+
+
 def article_html(spec):
     out = [spec['body_html'].strip()]
     if spec.get('faqs'):
@@ -67,7 +75,7 @@ def article_html(spec):
     if spec.get('sources'):
         lis = ''.join("<li><a href='%s' target='_blank' rel='noopener nofollow'>%s</a></li>" % (esc(s['url']), esc(s['title'])) for s in spec['sources'])
         out.append("<h2 id='references'>References</h2><ol class='small'>%s</ol>" % lis)
-    out.append("<div class='callout'>Planning a product? <a href='/product-brief/'>Share your product brief</a> and our R&amp;D team will reply within one working day.</div>")
+    out.append(CALLOUT)
     return '\n'.join(out)
 
 
@@ -187,7 +195,7 @@ def longest_run(a, b):
 def article_from_page(p):
     s = open(p, encoding='utf-8', errors='ignore').read()
     m = re.search(r"<article class='post'>([\s\S]*?)</article>", s)
-    return m.group(1) if m else s
+    return (m.group(1) if m else s).replace(CALLOUT, '')
 
 
 def other_texts(spec, repo='.', extra_dirs=()):
@@ -224,7 +232,7 @@ def other_texts(spec, repo='.', extra_dirs=()):
         if o.get('slug') == spec['slug'] or o.get('slug') in seen:
             continue
         seen.add(o.get('slug'))
-        yield label, o, article_html(o)
+        yield label, o, compare_html(o)
 
 
 def compare(spec_words, label, text):
@@ -237,7 +245,7 @@ def compare(spec_words, label, text):
 
 def originality(spec, repo='.', source_dir=None):
     errs, warns, report = [], [], []
-    mine = plain_words(article_html(spec))
+    mine = plain_words(compare_html(spec))
     norm = lambda x: re.sub(r'[^a-z0-9]+', ' ', (x or '').lower()).strip()
     for label, meta, text in other_texts(spec, repo):
         if norm(meta.get('primary_keyword')) and norm(meta.get('primary_keyword')) == norm(spec['primary_keyword']):
