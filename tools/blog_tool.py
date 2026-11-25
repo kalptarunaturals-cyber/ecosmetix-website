@@ -286,6 +286,26 @@ def distinctive_sentences(spec, n=6):
     return [' '.join(s.split()[:16]) for s in sents[::step][:n]]
 
 
+PAGE_SCHEMA = ('BlogPosting', 'Article', 'BreadcrumbList', 'FAQPage')
+
+
+def strip_stale_schema(s):
+    """Remove the shell post's own BlogPosting / BreadcrumbList / FAQPage blocks.
+
+    The first ld+json block (site @graph) carries this post's schema; any later
+    stand-alone block of these types was copied from the shell post and would
+    describe the wrong page to Google."""
+    blocks = list(re.finditer(r"<script type='application/ld\+json'>(.*?)</script>\s*", s, re.S))
+    for b in reversed(blocks[1:]):
+        try:
+            t = json.loads(b.group(1)).get('@type')
+        except ValueError:
+            continue
+        if t in PAGE_SCHEMA:
+            s = s[:b.start()] + s[b.end():]
+    return s
+
+
 def render(spec, repo='.', absolute=False):
     s = open(os.path.join(repo, SHELL), encoding='utf-8').read()
     url = '%s/blog/%s/' % (SITE, spec['slug'])
@@ -321,10 +341,11 @@ def render(spec, repo='.', absolute=False):
             {'@type': 'Question', 'name': f['q'], 'acceptedAnswer': {'@type': 'Answer', 'text': re.sub(r'<[^>]+>', '', f['a'])}}
             for f in spec['faqs']]})
     s = s[:m.start(1)] + json.dumps(g, ensure_ascii=False).replace('</', '<\\/') + s[m.end(1):]
+    s = strip_stale_schema(s)
     # hero + article
     s = re.sub(r"(<span class='eyebrow'>Ecosmetix blog</span><h1[^>]*>).*?(</h1>)", lambda mm: mm.group(1) + esc(spec['title']) + mm.group(2), s, count=1, flags=re.S)
     s = re.sub(r"(<p class='post-meta'[^>]*>).*?(</p>)", lambda mm: mm.group(1) + nice_date(spec['date']) + ' &middot; By the Ecosmetix R&amp;D team' + mm.group(2), s, count=1, flags=re.S)
-    hero = "<div class='photo' style='margin-bottom:30px'><img src='%s' alt='%s' width='1200' height='675'></div>" % (spec['image'], esc(spec['image_alt']))
+    hero = "<div class='photo' style='margin-bottom:30px'><img src='%s' alt='%s' width='1200' height='675' fetchpriority='high' decoding='async'></div>" % (spec['image'], esc(spec['image_alt']))
     s = re.sub(r"<article class='post'>.*?</article>", lambda mm: "<article class='post'>" + hero + article_html(spec) + '</article>', s, count=1, flags=re.S)
     if absolute:
         s = re.sub(r"(href|src)='/(?!/)", r"\1='" + SITE + '/', s)
